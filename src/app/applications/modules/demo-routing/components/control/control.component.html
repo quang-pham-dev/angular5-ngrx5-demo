@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">Demo Routing</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="list-group">
+          <a class="list-group-item list-group-item-action" [routerLink]="['/app/demo-routing/control/page1']">Page
+            1
+          </a>
+          <a class="list-group-item list-group-item-action" [routerLink]="['/app/demo-routing/control/page2']">Page
+            2
+          </a>
+          <a class="list-group-item list-group-item-action" [routerLink]="['/app/demo-routing/control/page3']">Page
+            3
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="router-outlet">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
