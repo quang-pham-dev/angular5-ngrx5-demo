@@ -1,0 +1,16 @@
+<div class="zone-dnd" appUploadFile (onDropFile)="onDropFile($event)">
+  <span class="h1 display-center">Drag & drop file here to upload</span>
+</div>
+<div class="card margin-top-20">
+  <div class="card-header">
+    <i class="fa fa-align-justify"></i>
+    <span class="h3">List files DnD</span>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <ng-template ngFor let-file [ngForOf]="files">
+        <li class="list-group-item">{{file.name}}</li>
+      </ng-template>
+    </ul>
+  </div>
+</div>

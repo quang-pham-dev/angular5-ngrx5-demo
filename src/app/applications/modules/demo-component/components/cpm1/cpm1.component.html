@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header">
+    <span>Component 1</span>
+  </div>
+  <div class="card-body">
+    <ng-container *ngIf="value">
+      <div class="form-group">
+        <span class="h5">Value :</span>
+        <span class="h4">{{value}}</span>
+      </div>
+    </ng-container>
+    <div class="form-group">
+      <label for="cpm1">Type a number</label>
+      <input type="number" id="cpm1" class="form-control" #num>
+    </div>
+    <button class="btn btn-success" (click)="sendData(num.value)">Send >> cmp2</button>
+  </div>
+</div>

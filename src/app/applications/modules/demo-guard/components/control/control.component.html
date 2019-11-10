@@ -1,0 +1,98 @@
+<div class="card">
+  <div class="card-header">
+    Permission
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Page</th>
+          <th>CanActivate</th>
+          <th>CanDeactivate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Page 1</td>
+          <td>
+            <label class="switch">
+              <input type="checkbox" [(ngModel)]="permission.canActivate.page1">
+              <span class="slider round"></span>
+            </label>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox" [(ngModel)]="permission.canDeactivate.page1">
+              <span class="slider round"></span>
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Page 2</td>
+          <td>
+            <label class="switch">
+              <input type="checkbox" [(ngModel)]="permission.canActivate.page2">
+              <span class="slider round"></span>
+            </label>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox" [(ngModel)]="permission.canDeactivate.page2">
+              <span class="slider round"></span>
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Page 3</td>
+          <td>
+            <label class="switch">
+              <input type="checkbox" [(ngModel)]="permission.canActivate.page3">
+              <span class="slider round"></span>
+            </label>
+          </td>
+          <td>
+            <label class="switch">
+              <input type="checkbox" [(ngModel)]="permission.canDeactivate.page3">
+              <span class="slider round"></span>
+            </label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="col-sm-3">
+        <button class="btn btn-success" (click)="setPermission()" [disabled]="compare()">Save</button>
+      </div>
+      <ng-container *ngIf="!compare()">
+        <div class="col-sm-3">
+          <span class="h4 text-danger">Save your changes now !</span>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">Demo Guard</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="list-group">
+          <a class="list-group-item list-group-item-action" [routerLink]="['/app/demo-guard/control/page1']">Access Page
+            1
+          </a>
+          <a class="list-group-item list-group-item-action" [routerLink]="['/app/demo-guard/control/page2']">Access Page
+            2
+          </a>
+          <a class="list-group-item list-group-item-action" [routerLink]="['/app/demo-guard/control/page3']">Access Page
+            3
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="router-outlet">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

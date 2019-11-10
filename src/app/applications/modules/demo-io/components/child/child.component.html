@@ -1,0 +1,18 @@
+<div class="card border border-danger">
+  <div class="card-header bg-info">
+    Child Component
+  </div>
+  <div class="card-body">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-sm-12">
+              <span class="h4">Data from parent: {{dataFromParent}}</span>
+          </div>
+        </div>
+        <label for="">Input a text</label>
+        <input type="text" class="form-control" #txt>
+        <button class="btn btn-success mt-1" (click)="outputToParent(txt.value)">Output to parent</button>
+      </div>
+  </div>
+</div>
+

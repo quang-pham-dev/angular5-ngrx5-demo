@@ -1,0 +1,79 @@
+<div class="card">
+  <div class="card-header">
+    Interpolation Binding
+  </div>
+  <div class="card-body">
+    Value : {{interpolationBinding}}
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Property Binding
+  </div>
+  <div class="card-body">
+    <img src="{{propertyBinding}}" alt="Can not display image" class="image-top">
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Attribute Binding
+  </div>
+  <div class="card-body">
+    <div [attr.id]="attributeBinding">
+      <span class="h4">Welcome VietNDT !</span>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Class Binding
+  </div>
+  <div class="card-body">
+    <div [ngClass]="classBinding">
+      <span class="h4">Welcome VietNDT !</span>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Style Binding
+  </div>
+  <div class="card-body">
+    <div [ngStyle]="{ 'width': '100%', 'height': styleBinding, 'background-color': 'yellow' }">
+      <span class="h4">Welcome VietNDT !</span>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Event Binding
+  </div>
+  <div class="card-body">
+    <div class="col-sm-6">
+      <span>isClick : {{isClick}}</span>
+    </div>
+    <div class="col-sm-6">
+      <button class="btn btn-success" (click)="clickButton()">Click me</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Two-way Binding
+  </div>
+  <div class="card-body">
+    <div class="col-sm-6">
+      <span>Value : {{twowayBinding}}</span>
+    </div>
+    <div class="col-sm-6 form-group">
+      <label for="">Input a text</label>
+      <input type="text" class="form-control" [(ngModel)]="twowayBinding">
+    </div>
+  </div>
+</div>

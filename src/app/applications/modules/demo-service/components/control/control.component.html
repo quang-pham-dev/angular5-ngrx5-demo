@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-header">
+    Use Service
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-2">
+        <button class="btn btn-success" (click)="getBooks()">Get Books</button>
+      </div>
+      <div class="col-sm-2">
+        <button class="btn btn-warning" (click)="getAuthors()">Get Author</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row margin-0">
+  <ng-template ngFor let-book [ngForOf]="books">
+    <div class="card book-item">
+      <div class="card-body">
+        <img src="{{book.image}}" alt="Card Image" class="card-img-top">
+        <p class="card-text">{{book.book_name}}</p>
+      </div>
+      <div class="card-footer">
+        <h4 class="card-title">{{book.author}}</h4>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngFor let-author [ngForOf]="authors">
+    <div class="card book-item">
+      <div class="card-body">
+        <img src="{{author.image}}" alt="Card Image" class="card-img-top">
+      </div>
+      <div class="card-footer">
+        <h4 class="card-title">{{author.author_name}}</h4>
+      </div>
+    </div>
+  </ng-template>
+</div>

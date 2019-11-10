@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-header">
+    Uppercase
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="">Type a text</label>
+      <input type="text" class="form-control" [(ngModel)]="demoUppercase">
+    </div>
+    <div class="form-group row">
+      <span class="col-sm-2">Not use pipe</span>
+      <span class="h6 col-sm-10">{{demoUppercase}}</span>
+    </div>
+    <div class="form-group row">
+      <span class="col-sm-2">Use pipe</span>
+      <span class="h6 col-sm-10">{{demoUppercase|uppercase}}</span>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Sorts the numbers in ascending order using bubble sort
+  </div>
+  <div class="card-body">
+    <div class="form-group row">
+      <span class="col-sm-2">Not use pipe</span>
+      <span class="h6 col-sm-10">{{arrayNum}}</span>
+    </div>
+    <div class="form-group row">
+      <span class="col-sm-2">Use pipe</span>
+      <span class="h6 col-sm-10">{{arrayNum|appSort}}</span>
+    </div>
+  </div>
+</div>
+
