@@ -21,6 +21,7 @@ import { RootComponent } from './components/root/root.component';
         provide: LocationStrategy,
         useClass: HashLocationStrategy
     },
+	// config
   ]
 })
 export class RootModule { }
